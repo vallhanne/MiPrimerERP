@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+                                         "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+ <session-factory>
+  <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+  <property name="hibernate.connection.password">rootr00t</property>
+  <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/Chinook</property>
+  <property name="hibernate.connection.username">root</property>
+  <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+  <mapping resource="AlbumClass.hbm.xml"/>
+  <mapping class="org.example.AlbumClass"/>
+  <mapping resource="ArtistClass.hbm.xml"/>
+  <mapping class="org.example.ArtistClass"/>
+  <mapping resource="CustomerClass.hbm.xml"/>
+  <mapping class="org.example.CustomerClass"/>
+  <mapping resource="EmployeeClass.hbm.xml"/>
+  <mapping class="org.example.EmployeeClass"/>
+  <mapping class="org.example.GenreClass"/>
+  <mapping resource="GenreClass.hbm.xml"/>
+  <mapping resource="InvoiceClass.hbm.xml"/>
+  <mapping class="org.example.InvoiceClass"/>
+  <mapping resource="InvoiceLineClass.hbm.xml"/>
+  <mapping class="org.example.InvoiceLineClass"/>
+  <mapping resource="MediaTypeClass.hbm.xml"/>
+  <mapping class="org.example.MediaTypeClass"/>
+  <mapping class="org.example.PlaylistClass"/>
+  <mapping resource="PlaylistClass.hbm.xml"/>
+  <mapping class="org.example.PlaylistTrackClass"/>
+  <mapping resource="PlaylistTrackClass.hbm.xml"/>
+  <mapping class="org.example.PlaylistTrackClassPK"/>
+  <mapping resource="TrackClass.hbm.xml"/>
+  <mapping class="org.example.TrackClass"/>
+ </session-factory>
+</hibernate-configuration>

@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="org.example.InvoiceClass" table="Invoice" schema="Chinook">
+        <id name="invoiceId">
+            <column name="InvoiceId" sql-type="int" not-null="true"/>
+        </id>
+        <property name="customerId">
+            <column name="CustomerId" sql-type="int" not-null="true"/>
+        </property>
+        <property name="invoiceDate">
+            <column name="InvoiceDate" sql-type="datetime" not-null="true"/>
+        </property>
+        <property name="billingAddress">
+            <column name="BillingAddress" sql-type="varchar(70)" length="70"/>
+        </property>
+        <property name="billingCity">
+            <column name="BillingCity" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="billingState">
+            <column name="BillingState" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="billingCountry">
+            <column name="BillingCountry" sql-type="varchar(40)" length="40"/>
+        </property>
+        <property name="billingPostalCode">
+            <column name="BillingPostalCode" sql-type="varchar(10)" length="10"/>
+        </property>
+        <property name="total">
+            <column name="Total" sql-type="decimal(10,2)" precision="10" scale="2" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>
